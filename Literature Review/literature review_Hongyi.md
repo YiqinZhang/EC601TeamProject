@@ -2,7 +2,7 @@
 ## Multi-View Stereo(Building 3D scenes from 2D images using ML algorithms)
 ### What is Multi-View Stereo?
   Multi-view stereo (MVS) is a general term for a series of methods of multi-view 3D reconstruction which refers to the task of reconstructing a 3D shape from calibrated overlapping images captured from different viewpoints. In short, it uses multiple photos taken by one/multiple camera(s) to reconstruct the 3D scene in the photo.
-![](/images/1.png)
+![](images/1.png)
 <p align="center">
                                                                                     Figure1
   </p>
@@ -11,7 +11,7 @@
 ### Why is MVS important?
   MVS is widely used range from 3D mapping and navigation to online shopping, 3D printing, computational photography, computer video games, or cultural heritage archival.
   
-  ![](/Literature Review/images/AR.png) ![](/Literature Review/images/autonomous.png) ![](/Literature Review/images/robots.png)
+  ![](images/AR.png) ![](images/autonomous.png) ![](images/robots.png)
 <p align="center">
                                                                                     Figure2
   </p>
@@ -30,7 +30,7 @@
 #### hand-crafted method
   Before generalizing statistics-like method of mvs, it is worth mentioning the SFM(Structure for motion) algorithm. Its idea is very suitable for MVS and it is very valuable for reference. SFM refers to a series of algorithms for estimating three-dimensional structure from a sequence of moving two-dimensional images. Normally, SFM mainly focused on the geometry of two and three views. 
   
-  ![](/Literature Review/images/sfm.png)
+  ![](images/sfm.png)
 <p align="center">
                                                                                     Figure3
   </p>
@@ -48,14 +48,14 @@ Although traditional methods can achieve good results under many circumstances, 
 ##### MVSNet
   After 2010, cnn has achieved sota results in more and more image processing tasks. Many people began to consider whether CNN can be used in the mvs, but the final results obtained are not satisfactory. Until the proposal of MVSNet, the first to apply cost volume to the neural network, achieved very good experimental results. MVSNet can be regarded as the originator of neural networks in the field of MVS.
   
-  ![](/Literature Review/images/MVSNet.png)
+  ![](images/MVSNet.png)
 <p align="center">
                                                                                     Figure4
   </p>
   In the paper, the author proposed an end-to-end deep learning architecture for depth map inference(see Figure4). The network takes one reference image and several source images as input, and then use the convolutional network to obtain the feature maps respectively. The key insight is the differentiable homography warping operation, which implicitly encodes camera geometry in the network to build the 3D cost volumes from 2D image features maps. Then a variance-based metric was proposed that maps multiple features into one cost feature in the volume. Cost volume then undergoes multi-scale 3D convolutions and regress an initial depth map. Finally, the depth map is refined with the reference image to improve the accuracy of boundary areas.
   After the network was proposed, many researchers generally accepted this idea and proposed many improved versions were on MVSNET, such as R-MVSNet, Fast-MVSNet and Cas-MVSNet. 
   
-![](/Literature Review/images/overall.png)
+![](images/overall.png)
 <p align="center">
                                                                                     Figure5
   </p>
