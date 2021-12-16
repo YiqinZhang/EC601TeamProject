@@ -2,7 +2,7 @@
 ## Multi-View Stereo(Building 3D scenes from 2D images using ML algorithms)
 ### What is Multi-View Stereo?
   Multi-view stereo (MVS) is a general term for a series of methods of multi-view 3D reconstruction which refers to the task of reconstructing a 3D shape from calibrated overlapping images captured from different viewpoints. In short, it uses multiple photos taken by one/multiple camera(s) to reconstruct the 3D scene in the photo.
-![](/Literature Review/images/1.png)
+![](/images/1.png)
 <p align="center">
                                                                                     Figure1
   </p>
